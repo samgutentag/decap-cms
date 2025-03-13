@@ -17,4 +17,14 @@ module.exports = {
   testEnvironmentOptions: {
     url: 'http://localhost:8080',
   },
+  reporters: [
+    [
+      'jest-junit',
+      {
+        outputDirectory: './results',
+        outputName: 'jest-report.xml',
+        addFileAttribute: 'true',
+      },
+    ],
+  ],
 };

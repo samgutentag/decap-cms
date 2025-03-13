@@ -2,9 +2,15 @@ import { defineConfig } from 'cypress';
 
 export default defineConfig({
   projectId: '1c35bs',
-  retries: {
-    runMode: 4,
-    openMode: 0,
+  retries: 0,
+  // retries: {
+  //   runMode: 4,
+  //   openMode: 0,
+  // },
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'results/cyprus-junit.xml',
+    toConsole: true,
   },
   e2e: {
     video: false,
